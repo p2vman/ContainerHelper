@@ -1,0 +1,25 @@
+<!ELEMENT root (module*, run, pip, env*, requirements*)>
+<!ATTLIST root 
+          version CDATA #REQUIRED>
+
+<!ELEMENT module EMPTY>
+<!ATTLIST module 
+          name CDATA #REQUIRED
+          version CDATA #REQUIRED>
+
+<!ELEMENT run EMPTY>
+<!ATTLIST run 
+          file CDATA #REQUIRED>
+
+<!ELEMENT pip EMPTY>
+<!ATTLIST pip 
+          flags CDATA #REQUIRED>
+
+<!ELEMENT requirements EMPTY>
+<!ATTLIST requirements 
+          file CDATA #REQUIRED>
+
+<!ELEMENT env EMPTY>
+<!ATTLIST env 
+          path CDATA #IMPLIED
+          type (json | ini | properties) #REQUIRED>
